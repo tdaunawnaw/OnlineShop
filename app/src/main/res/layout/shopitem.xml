@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="@dimen/dimen_8"
+    tools:context=".MainActivity">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/imagecard"
+        android:layout_width="200dp"
+        android:layout_height="250dp"
+        app:cardCornerRadius="@dimen/dimen_8"
+        android:elevation="@dimen/dimen_8"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent">
+
+        <ImageView
+            android:id="@+id/imagelatest"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop" />
+
+    </androidx.cardview.widget.CardView>
+    <TextView
+        android:id="@+id/name_latest"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hyde Park"
+        app:layout_constraintTop_toBottomOf="@+id/imagecard"
+        app:layout_constraintLeft_toLeftOf="@+id/imagecard"/>
+
+    <TextView
+        android:id="@+id/count_latest"
+        android:layout_width="32dp"
+        android:layout_height="18dp"
+        android:text="N2016"
+        app:layout_constraintLeft_toLeftOf="@id/imagecard"
+        app:layout_constraintTop_toBottomOf="@+id/name_latest" />
+
+    <TextView
+        android:id="@+id/louis"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="LOUIS VUITTON"
+        app:layout_constraintTop_toBottomOf="@id/count_latest"
+        app:layout_constraintLeft_toLeftOf="@id/imagecard"/>
+
+    <ImageView
+        android:id="@+id/imagerating"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:src="@drawable/rating"
+        app:layout_constraintLeft_toLeftOf="@id/imagecard"
+        app:layout_constraintTop_toBottomOf="@id/louis" />
+
+    <ImageView
+        android:id="@+id/imagerating2"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:src="@drawable/rating"
+        app:layout_constraintTop_toBottomOf="@id/louis"
+        app:layout_constraintLeft_toRightOf="@id/imagerating"/>
+
+    <ImageView
+        android:id="@+id/imagerating3"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:src="@drawable/rating"
+        app:layout_constraintTop_toBottomOf="@id/louis"
+        app:layout_constraintLeft_toRightOf="@+id/imagerating2"/>
+
+
+    <ImageView
+        android:id="@+id/imagerating4"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:src="@drawable/rating"
+        app:layout_constraintLeft_toRightOf="@+id/imagerating3"
+        app:layout_constraintTop_toBottomOf="@id/louis" />
+
+
+    <ImageView
+        android:id="@+id/imagerating5"
+        android:layout_width="18dp"
+        android:layout_height="18dp"
+        android:src="@drawable/emptyrating"
+        app:layout_constraintTop_toBottomOf="@id/louis"
+        app:layout_constraintLeft_toRightOf="@id/imagerating4"/>
+
+    <TextView
+        android:id="@+id/txtprice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="999,99999"
+        android:layout_marginLeft="@dimen/dimen_16"
+        app:layout_constraintTop_toBottomOf="@id/louis"
+        app:layout_constraintLeft_toRightOf="@id/imagerating5"
+        />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+

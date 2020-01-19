@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:nestedScrollingEnabled="false">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity">
+
+
+        <ImageView
+            android:id="@+id/camera"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/camera"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/shop2"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_marginTop="20dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/shop2"
+            app:layout_constraintLeft_toLeftOf="@id/txt_latest"
+            app:layout_constraintTop_toBottomOf="@id/camera" />
+
+        <TextView
+            android:id="@+id/txt_latest"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="@dimen/dimen_16"
+            android:fontFamily="@font/robotblack"
+            android:text="@string/latest"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/shop2" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/latest_recycler"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintLeft_toLeftOf="@id/txt_latest"
+            app:layout_constraintTop_toBottomOf="@id/txt_latest">
+
+        </androidx.recyclerview.widget.RecyclerView>
+
+        <ImageView
+            android:id="@+id/shop"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_marginTop="@dimen/dimen_20"
+            android:scaleType="centerCrop"
+            android:src="@drawable/shop"
+            app:layout_constraintLeft_toLeftOf="@id/txt_latest"
+            app:layout_constraintTop_toBottomOf="@id/latest_recycler" />
+
+        <TextView
+            android:id="@+id/choose"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="@dimen/dimen_16"
+            android:fontFamily="@font/robotblack"
+            android:text="Choose By Country"
+            app:layout_constraintLeft_toLeftOf="@id/txt_latest"
+            app:layout_constraintTop_toBottomOf="@+id/shop" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/choose_recycler"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toLeftOf="@id/txt_latest"
+            app:layout_constraintTop_toBottomOf="@id/choose">
+
+        </androidx.recyclerview.widget.RecyclerView>
+
+
+        <ImageView
+            android:id="@+id/shop3"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_marginTop="@dimen/dimen_20"
+            android:scaleType="centerCrop"
+            android:src="@drawable/shop3"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/choose_recycler" />
+
+        <TextView
+            android:id="@+id/txt_popular"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dimen_16"
+            android:fontFamily="@font/robotblack"
+            android:text="Popular Products"
+            app:layout_constraintTop_toBottomOf="@id/shop3" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/popular_recycler"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/txt_popular">
+
+        </androidx.recyclerview.widget.RecyclerView>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

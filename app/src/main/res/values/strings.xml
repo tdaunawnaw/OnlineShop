@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Shoponline</string>
+
+    <string name="latest">Latest Item</string>
+    <string name="choose">Choose By Country</string>
+    <string name="popular">Popular Products</string>
+</resources>
