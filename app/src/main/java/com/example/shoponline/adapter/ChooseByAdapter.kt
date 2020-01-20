@@ -4,6 +4,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
+import android.widget.TextView
 import androidx.appcompat.view.menu.MenuView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.shoponline.Model.choose
@@ -12,9 +13,7 @@ import kotlinx.android.synthetic.main.choosebycountry.view.*
 
 class ChooseViewHolder(ItemView:View):RecyclerView.ViewHolder(ItemView){
     var image=ItemView.findViewById<ImageView>(R.id.korea)
-    var image2=ItemView.findViewById<ImageView>(R.id.japan)
-    var image3=ItemView.findViewById<ImageView>(R.id.singapore)
-    var image4=ItemView.findViewById<ImageView>(R.id.china)
+
 }
 
 class ChooseAdapter(var chooseList: ArrayList<choose>):RecyclerView.Adapter<ChooseViewHolder>(){
@@ -29,11 +28,6 @@ class ChooseAdapter(var chooseList: ArrayList<choose>):RecyclerView.Adapter<Choo
 
     override fun onBindViewHolder(holder: ChooseViewHolder, position: Int) {
         holder.image.setImageResource(chooseList[position].image)
-        holder.image2.setImageResource(chooseList[position].image2)
-        holder.image3.setImageResource(chooseList[position].image3)
-        holder.image4.setImageResource(chooseList[position].image4)
-
-
 
     }
 

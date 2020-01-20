@@ -6,6 +6,7 @@ import android.view.TextureView
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
+import android.widget.RatingBar
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.shoponline.Model.shop
@@ -17,11 +18,7 @@ class ShopViewHolder(ItemView: View) : RecyclerView.ViewHolder(ItemView) {
     var narme = ItemView.findViewById<TextView>(R.id.name_latest)
     var count = ItemView.findViewById<TextView>(R.id.count_latest)
     var namelouis = ItemView.findViewById<TextView>(R.id.louis)
-    var imgrating = ItemView.findViewById<ImageView>(R.id.imagerating)
-    var imgrating2 = ItemView.findViewById<ImageView>(R.id.imagerating2)
-    var imgrating3 = ItemView.findViewById<ImageView>(R.id.imagerating3)
-    var imgrating4 = ItemView.findViewById<ImageView>(R.id.imagerating4)
-    var imgemptyrate = ItemView.findViewById<ImageView>(R.id.imagerating5)
+    var imgrating = ItemView.findViewById<RatingBar>(R.id.ratin_bar)
     var txtprice=ItemView.findViewById<TextView>(R.id.txtprice)
 
 }
@@ -41,11 +38,7 @@ class ShopAdapter(val shopList: ArrayList<shop>) : RecyclerView.Adapter<ShopView
         holder.narme.text=shopList[position].name
         holder.count.text=shopList[position].count
         holder.namelouis.text=shopList[position].namelouis
-        holder.imgrating.setImageResource(shopList[position].imgrating)
-        holder.imgrating2.setImageResource(shopList[position].imgrating2)
-        holder.imgrating3.setImageResource(shopList[position].imgrating3)
-        holder.imgrating4.setImageResource(shopList[position].imgrating4)
-        holder.imgemptyrate.setImageResource(shopList[position].imgemptyrate)
+        holder.imgrating.textAlignment=shopList[position].imgrating
         holder.txtprice.text=shopList[position].txtprice.toString()
     }
 

@@ -31,14 +31,10 @@ class MainActivity : AppCompatActivity() {
         var latestList=ArrayList<shop>()
         latestList.add(
             shop(R.drawable.bag,"Hyde Park","N21","Limited Bag",
-            R.drawable.rating,R.drawable.rating,R.drawable.rating,R.drawable.rating,
-            R.drawable.emptyrating,45000))
-        latestList.add(shop(R.drawable.shirt2,"Shoulder off","N22","Limited shirt",
-            R.drawable.rating,R.drawable.rating,R.drawable.rating,R.drawable.rating,
-            R.drawable.emptyrating,55000))
-        latestList.add(shop(R.drawable.skirt,"Short skirt","N23","Limited skirt",
-            R.drawable.rating,R.drawable.rating,R.drawable.rating,R.drawable.rating,
-            R.drawable.emptyrating,87000))
+           4, 45000))
+        latestList.add(shop(R.drawable.shirt2,"Shoulder off","N22","Limited shirt",4,
+            55000))
+        latestList.add(shop(R.drawable.skirt,"Short skirt","N23","Limited skirt",4, 87000))
 
         val shopAdapter=ShopAdapter(latestList)
 
@@ -53,10 +49,10 @@ class MainActivity : AppCompatActivity() {
         var popularRecyclerView:RecyclerView=findViewById(R.id.popular_recycler)
 
         var productList=ArrayList<product>()
-        productList.add(product("New","30% off","Iphone 8 Plus","Apple",R.drawable.rating,R.drawable.rating,R.drawable.rating,R.drawable.rating,R.drawable.emptyrating,670000,R.drawable.iphone8))
-        productList.add(product("New","35% off","Ghost Bed","Bed",R.drawable.rating,R.drawable.rating,R.drawable.rating,R.drawable.rating,R.drawable.emptyrating,670000,R.drawable.ghostbed))
-        productList.add(product("New","40% off","Nintento","Game",R.drawable.rating,R.drawable.rating,R.drawable.rating,R.drawable.rating,R.drawable.emptyrating,670000,R.drawable.nintento))
-        productList.add(product("New","20% off","Dress","Beautiful",R.drawable.rating,R.drawable.rating,R.drawable.rating,R.drawable.rating,R.drawable.emptyrating,670000,R.drawable.dress))
+        productList.add(product("New","30% off","Iphone 8 Plus","Apple",4,670000,R.drawable.iphone8))
+        productList.add(product("New","35% off","Ghost Bed","Bed",4,670000,R.drawable.ghostbed))
+        productList.add(product("New","40% off","Nintento","Game",4,670000,R.drawable.nintento))
+        productList.add(product("New","20% off","Dress","Beautiful",4,670000,R.drawable.dress))
 
         var popularadapter=PopularAdapter(productList)
 
@@ -69,12 +65,16 @@ class MainActivity : AppCompatActivity() {
         var chooseRecyclerView:RecyclerView=findViewById(R.id.choose_recycler)
 
         var chooseList=ArrayList<choose>()
-        chooseList.add(choose(R.drawable.korea,R.drawable.japan2,R.drawable.singapore,R.drawable.china2))
+        chooseList.add(choose(R.drawable.korea))
+        chooseList.add(choose(R.drawable.japan2))
+        chooseList.add(choose(R.drawable.singapore))
+        chooseList.add(choose(R.drawable.china2))
+
 
         var chooseAdapter=ChooseAdapter(chooseList)
 
 
-        chooseRecyclerView.layoutManager=LinearLayoutManager(this,LinearLayoutManager.HORIZONTAL,false)
+        chooseRecyclerView.layoutManager=GridLayoutManager(this,2)
 
         chooseRecyclerView.adapter=chooseAdapter
     }
